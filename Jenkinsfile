@@ -1,10 +1,5 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    environment {
-        tools {
-          'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
-        }
-    }
     agent {
         docker {
             image 'node:24.11.1-alpine3.22'
