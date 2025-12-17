@@ -10,11 +10,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'cd src'
-                sh 'ls'
-                sh 'cd src/azure-sa'
-                sh 'pwd'
-                sh 'sudo chown -R 502:20 "/.npm"'
+                sh 'sudo chown -R 502:20 "/src/azure-sa/.npm"'
                 sh 'npx eslint'
             }
         }
