@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
+                sh 'pwd'
                 sh 'cd src/azure-sa'
                 sh 'npx eslint'
             }
@@ -19,8 +20,7 @@ pipeline {
         }
         stage ('Static Analysis') {
             steps {
-                sh 'sudo npm install'
-                sh 'sudo chown -R 502:20 "/.npm"'
+                sh 'sudo chown -R 502:20 "/Users/phoeberevolta/.nvm/versions/node/v22.15.0/bin/npm/opt/homebrew/bin/npm"'
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
             }
             post {
