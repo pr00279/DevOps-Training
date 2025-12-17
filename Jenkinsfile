@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'cd src/azure-sa'
+                sh 'pwd'
                 sh 'npx eslint'
             }
         }
