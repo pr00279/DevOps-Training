@@ -19,6 +19,7 @@ pipeline {
         }
         stage ('Static Analysis') {
             steps {
+                sh 'sudo chown -R 502:20 "/.npm"'
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
             }
             post {
