@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'eslint'
+                sh 'npx eslint'
             }
         }
         stage('build') {
@@ -20,7 +20,6 @@ pipeline {
         }
         stage ('Static Analysis') {
             steps {
-                sh 'sudo chown -R 502:20 "/Users/phoeberevolta/.nvm/versions/node/v22.15.0/bin/npm/opt/homebrew/bin/npm"'
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
             }
             post {
