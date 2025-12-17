@@ -9,6 +9,7 @@ pipeline {
         stage('test') {
             steps {
                 sh 'pwd'
+                sh 'ls'
                 sh 'cd src/azure-sa'
                 sh 'pwd'
                 sh 'npx eslint'
