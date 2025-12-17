@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
+                sh 'export npm_config_cache=/.'
                 sh 'npx eslint'
             }
         }
