@@ -10,7 +10,6 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'sudo chown -R $USER:$GROUP ~/.npm'
                 sh 'npx eslint'
             }
         }
