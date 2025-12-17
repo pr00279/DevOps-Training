@@ -6,6 +6,12 @@ pipeline {
         }
     }
     stages {
+        stage('test') {
+            steps {
+                sh 'cd src/azure-sa'
+                sh 'npx eslint'
+            }
+        }
         stage('build') {
             steps {
                 sh 'node --version'
