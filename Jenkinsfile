@@ -11,8 +11,7 @@ pipeline {
                 sh 'node --version'
             }
         }
-    }
-    stage ('Static Analysis') {
+        stage ('Static Analysis') {
             steps {
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
             }
