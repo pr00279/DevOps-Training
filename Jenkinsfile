@@ -19,6 +19,7 @@ pipeline {
         }
         stage ('Static Analysis') {
             steps {
+                sh 'sudo npm install'
                 sh 'sudo chown -R 502:20 "/.npm"'
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
             }
