@@ -11,6 +11,7 @@ pipeline {
                 dir('src/azure-sa') {
                     sh 'pwd'
                     sh 'ls'
+                    sh 'sudo chown -R 502:20 "/.npm"'
                     sh 'npx eslint'
                 }
             }
