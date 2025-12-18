@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                dir('project') {
+                dir('src/azure-sa') {
                     sh 'pwd'
                     sh 'ls'
                     sh 'npm install'
