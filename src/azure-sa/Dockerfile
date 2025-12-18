@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
 FROM node:lts-alpine
-WORKDIR /app
+WORKDIR /src/azure-sa
 COPY . .
-RUN yarn install --production
+RUN npm install
 CMD ["node", "index.js"]
 EXPOSE 3000
