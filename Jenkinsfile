@@ -8,10 +8,12 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'pwd'
-                sh 'ls'
-                sh 'npm install'
-                sh 'npx eslint'
+                dir('project') {
+                    sh 'pwd'
+                    sh 'ls'
+                    sh 'npm install'
+                    sh 'npx eslint'
+                }
             }
         }
         stage('build') {
