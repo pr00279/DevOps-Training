@@ -11,7 +11,6 @@ pipeline {
                 dir('src/azure-sa') {
                     sh 'pwd'
                     sh 'ls'
-                    sh 'npm install'
                     sh 'npx eslint'
                 }
             }
