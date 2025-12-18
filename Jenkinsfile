@@ -11,7 +11,7 @@ pipeline {
                 dir('src/azure-sa') {
                     sh 'pwd'
                     sh 'ls'
-                    sh 'sudo chown -R 502:20 "/.npm"'
+                    sh 'npm install express multer dotenv @azure/storage-blob'
                     sh 'npx eslint'
                 }
             }
