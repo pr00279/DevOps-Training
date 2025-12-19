@@ -3,8 +3,7 @@
 FROM node:lts-alpine
 WORKDIR /app
 COPY . .
-RUN npm install
-RUN sudo chown -R 502:20 "/.npm"
+RUN npm install express multer dotenv @azure/storage-blob
 CMD ["node", "index.js"]
 EXPOSE 3000
-
+CONTAINER_NAME filevault
