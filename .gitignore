@@ -1,5 +1,7 @@
 # Node modules
 **/node_modules/
+**/jenkins-compose/
+**/FileVault-azure-rg/
 
 # Environment variables
 **/.env
