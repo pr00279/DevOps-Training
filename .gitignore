@@ -2,6 +2,7 @@
 **/node_modules/
 **/jenkins-compose/
 **/FileVault-azure-rg/
+**/.yarn
 
 # Environment variables
 **/.env
@@ -32,3 +33,13 @@ Thumbs.db
 
 # Uploads
 **/uploads/
+
+#Jenkins
+**/jenkins_compose/
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+main.tfplan
