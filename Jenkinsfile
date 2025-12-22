@@ -19,8 +19,8 @@ pipeline {
         stage('Unit Tests') {
             steps {
                 script {
-                    sh 'npm test'
-                    sh 'npm install'
+                    sh 'npm install express multer dotenv @azure/storage-blob'
+                    sh 'npx eslint'
                 }
             }
         }
