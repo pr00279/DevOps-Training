@@ -18,11 +18,8 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                script {
+                dir('src/azure-sa') {
                     sh 'npm install express multer dotenv @azure/storage-blob'
-                    sh 'ls'
-                    sh 'cd src/azure-sa'
-                    sh 'pwd'
                     sh 'npx eslint'
                 }
             }
