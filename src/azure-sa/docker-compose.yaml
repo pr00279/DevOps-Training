@@ -19,4 +19,4 @@
       expose:
       - 22
       environment:
-      - JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAUHUW2h/K8r1k0/lsoWgXs3H4e6VUxxFohKF3L1B6wZ phoeberevolta@SoliriusL96X05DVTQ
+      - JENKINS_AGENT_SSH_PUBKEY=${JENKINS_AGENT_SSH_PUBKEY}
