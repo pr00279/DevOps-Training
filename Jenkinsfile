@@ -3,7 +3,7 @@ pipeline {
 
     agent any
     tools {
-        node js 'NodeJS'
+        nodejs 'NodeJS'
     }
     stages {
         stage('GitHub') {
