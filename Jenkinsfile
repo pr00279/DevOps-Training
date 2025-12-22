@@ -20,6 +20,8 @@ pipeline {
             steps {
                 script {
                     sh 'npm install express multer dotenv @azure/storage-blob'
+                    sh 'cd src/azure-sa'
+                    sh 'pwd'
                     sh 'npx eslint'
                 }
             }
